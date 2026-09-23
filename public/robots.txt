@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /qr
+Sitemap: https://bougez.mvt-solutions.fr/sitemap.xml

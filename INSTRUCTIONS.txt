@@ -1,0 +1,11 @@
+DEPOT GITHUB MVT-SOLUTIONS — Au bureau, bougez plus
+
+1. Décompresser cette archive.
+2. Sur https://github.com/Valentin-hub853/mvt-landing-bureau cliquer « uploading an existing file ».
+3. Faire glisser UNIQUEMENT le dossier « public » entier dans la zone de dépôt GitHub.
+4. Vérifier dans l’aperçu qu'il existe public/index.html, public/assets/ et public/_redirects.
+5. Cliquer « Commit changes » sur la branche main.
+
+Ensuite dans Cloudflare Pages : dépôt mvt-landing-bureau, branche main, framework None, build command vide (ou exit 0), output directory public.
+Adresse souhaitée : bougez.mvt-solutions.fr, QR : https://bougez.mvt-solutions.fr/qr
+Le QR ne doit pas être imprimé tant que le domaine et /qr ne répondent pas.
