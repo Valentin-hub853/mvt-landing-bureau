@@ -1,0 +1,39 @@
+MVT-SOLUTIONS — LANDING PAGE TERRAIN : LIVRAISON DU 24 SEPTEMBRE 2026
+
+DÉJÀ PRÊT
+- Page Terrain existante conservée (contenu PPP validé, design Roboto et responsive).
+- Photo Hero EXACTE de la bannière validée, dans assets/preparation-physique-terrain.jpg :
+  cercle transparent sans liseré orange. Le seul liseré orange est celui du CSS.
+- Fichier images et logo dans public/terrain/assets.
+- QR code Terrain vers https://bougez.mvt-solutions.fr/terrain/ (PNG et SVG dans impression/).
+- Formulaire connecté au POST /api/contact via fonction Cloudflare Pages.
+- Bureau conservé : aucune modification de public/index.html ni public/assets/.
+
+IMPORTANT — LE FORMULAIRE N’ENVOIE PAS ENCORE D’E-MAIL TANT QUE RESEND N’EST PAS CONFIGURÉ.
+La fonction renvoie alors un message d’erreur et propose l’e-mail de contact. Ne pas annoncer un formulaire actif avant un test réel.
+
+MISE À JOUR GITHUB (même dépôt Valentin-hub853/mvt-landing-bureau)
+1. Décompresser ce ZIP.
+2. À la racine du dépôt, importer ensemble :
+   public/terrain/   (index.html + 4 assets),
+   public/_redirects,
+   public/sitemap.xml,
+   functions/api/contact.js  (IMPORTANT : dossier functions à la racine, PAS dans public/).
+3. Confirmer uniquement les remplacements des fichiers Terrain et des deux fichiers techniques racine.
+   Ne PAS supprimer les anciens public/index.html et public/assets/ (la page Bureau).
+4. Commit sur main. Cloudflare Pages, déjà relié à GitHub, redéploie normalement automatiquement.
+5. Dans Cloudflare Pages : projet mvt-landing-bureau, vérifier le déploiement vert.
+6. Tester https://bougez.mvt-solutions.fr/terrain/ puis recharger sans cache sur mobile.
+
+FORMULAIRE — CONFIGURATION À FAIRE ENSEMBLE ENSUITE
+A. Créer / connecter Resend et vérifier un sous-domaine dédié à l’e-mail d’envoi (ex. mail.mvt-solutions.fr).
+   N’ajouter que les DNS indiqués par le prestataire, sans toucher au site ni aux MX Exchange du domaine principal.
+B. Dans Cloudflare > Workers & Pages > mvt-landing-bureau > Paramètres > Variables et secrets (production) :
+   RESEND_API_KEY = clé privée Resend (secret, JAMAIS dans GitHub)
+   RESEND_FROM_EMAIL = MVT-Solutions <formulaire@mail.mvt-solutions.fr> (après vérification du sous-domaine)
+   CONTACT_TO_EMAIL = contact@mvt-solutions.fr (variable facultative)
+C. Redéployer une fois les secrets installés, puis effectuer un vrai test.
+D. Confirmer la réception dans contact@mvt-solutions.fr et le Reply-To de l’expéditeur.
+
+NOTE SEO : le sitemap inclut désormais la page Bureau ET la page Terrain.
+QR : le code livré va directement sur /terrain/. Une redirection /terrain/qr (avec paramètres UTM) est également préparée pour une autre série d’affiches.

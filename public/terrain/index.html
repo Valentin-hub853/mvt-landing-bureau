@@ -46,8 +46,8 @@ nav a:hover{color:var(--green-dark)}
 .hero-copy{margin:0 0 28px;font-size:19px;line-height:1.75;color:var(--muted);max-width:680px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-visual{display:flex;flex-direction:column;align-items:flex-end;justify-content:center}
-.hero-photo{width:min(100%,520px);aspect-ratio:1;border:4px solid var(--orange);border-radius:50%;padding:12px;background:#fff;box-shadow:0 20px 48px rgba(30,70,35,.10);overflow:hidden}
-.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;border:0;outline:0}
+.hero-photo{width:min(100%,520px);aspect-ratio:1;border:4px solid #111;border-radius:50%;padding:12px;background:#fff;box-shadow:0 20px 48px rgba(30,70,35,.10);overflow:hidden}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;border:0;outline:0;background:#fff}
 .hero-badge{margin-top:24px;width:300px;background:#fff;border:1px solid #e3e3e3;padding:20px 22px;border-radius:12px;box-shadow:0 12px 28px rgba(0,0,0,.07)}
 .hero-badge strong{display:block;color:var(--green);font-size:24px;line-height:1.2;margin-bottom:6px}
 .hero-badge span{font-size:16px;line-height:1.55;color:#3e4541}
@@ -175,6 +175,12 @@ footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;fo
   .hero-actions .btn{width:100%}
   .founder-photo{width:124px;height:124px;flex-basis:124px}
 }
+/* Formulaire connecté à l’API Cloudflare Pages : états discrets et accessibles. */
+.form-status{margin:16px 0 0;padding:12px 14px;border-radius:4px;font-size:15px;line-height:1.5;display:none}
+.form-status[data-state="success"]{display:block;color:#145522;background:#e8f7eb;border:1px solid #b4dcbc}
+.form-status[data-state="error"]{display:block;color:#842828;background:#fff0ef;border:1px solid #f0c3bd}
+.form button[type="submit"][disabled]{opacity:.65;cursor:wait}
+.honey-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}
 </style>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <link href="https://bougez.mvt-solutions.fr/terrain/" rel="canonical"/>
@@ -211,7 +217,7 @@ footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;fo
 <div class="hero-actions"><a class="btn btn-dark" href="#contact">Échanger sur mon projet</a><a class="btn btn-light" href="#methode">Découvrir la méthode</a></div>
 </div>
 <div class="hero-visual">
-<div class="hero-photo"><img alt="Trois salariés réalisent ensemble une inclinaison latérale du buste, un bras levé et l’autre main sur la hanche, avant leur prise de poste en entrepôt" decoding="async" fetchpriority="high" height="1536" src="assets/preparation-physique-terrain.jpg" width="1536"/></div>
+<div class="hero-photo"><img alt="Trois salariés réalisent ensemble une inclinaison latérale du buste, un bras levé et l’autre main sur la hanche, avant leur prise de poste en entrepôt" decoding="async" fetchpriority="high" height="1254" src="assets/preparation-physique-terrain.jpg" width="1254"/></div>
 </div>
 </div>
 </section>
@@ -258,24 +264,56 @@ footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;fo
 </section>
 <section class="section"><div class="container"><p class="eyebrow">Pourquoi MVT-Solutions ?</p><h2 class="section-title">Un accompagnement construit autour de votre réalité terrain.</h2><div class="why-grid"><div class="why-card"><div class="metric">20 ans</div><h3>d’expérience sport santé</h3><p>Une expertise du mouvement et de la condition physique mobilisée pour comprendre les contraintes professionnelles et sensibiliser les équipes.</p></div><div class="why-card"><div class="metric">Sur-mesure</div><h3>au plus près des métiers</h3><p>Routines adaptées aux postes, accompagnement des relais internes et suivi dans le temps pour faire vivre les bonnes pratiques au quotidien.</p></div></div></div></section>
 <section class="section contact" id="contact"><div class="container contact-grid"><div><p class="eyebrow">Parlons de votre terrain</p><h2 class="section-title">Vous souhaitez préparer vos équipes aux contraintes du poste ?</h2><p class="section-lead">Expliquez-nous vos métiers, vos contraintes et votre organisation. Nous pourrons identifier ensemble le bon point de départ.</p><div class="founder"><div class="founder-photo"><img alt="Portrait de Valentin Besse" decoding="async" height="1254" loading="lazy" src="assets/valentin-portrait.jpg" width="1254"/></div><div><h3>Valentin Besse</h3><p>Gérant fondateur de MVT-Solutions</p><p style="margin-top:8px;color:#fff">Votre contact direct pour cadrer votre besoin.</p></div></div><div class="contact-links"><a href="tel:+33603007174">06 03 00 71 74</a><a href="mailto:contact@mvt-solutions.fr">contact@mvt-solutions.fr</a><a href="https://www.mvt-solutions.fr/">www.mvt-solutions.fr</a></div></div>
-<form class="form" id="contactForm"><h3>Parlez-nous de votre projet</h3><p>Quelques informations suffisent pour préparer un premier échange utile.</p><div class="form-grid"><div class="field"><label for="name">Nom</label><input id="name" name="name" required=""/></div><div class="field"><label for="company">Entreprise</label><input id="company" name="company"/></div><div class="field"><label for="email">Email</label><input id="email" name="email" required="" type="email"/></div><div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone"/></div><div class="field full"><label for="need">Votre besoin</label><select id="need" name="need"><option>Préparation physique professionnelle</option><option>Réveil musculaire</option><option>Prévention des TMS</option><option>Formation de relais internes</option><option>Accompagnement global</option><option>Autre</option></select></div><div class="field full"><label for="message">Contexte</label><textarea id="message" name="message"></textarea></div></div><button class="btn btn-dark" type="submit">Préparer mon message</button><p class="form-note">Le bouton ouvre votre messagerie avec les informations saisies.</p></form></div></section>
+<form class="form" id="contactForm"><h3>Parlez-nous de votre projet</h3><p>Quelques informations suffisent pour préparer un premier échange utile.</p><div class="form-grid"><div class="field"><label for="name">Nom</label><input id="name" name="name" required=""/></div><div class="field"><label for="company">Entreprise</label><input id="company" name="company"/></div><div class="field"><label for="email">Email</label><input id="email" name="email" required="" type="email"/></div><div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone"/></div><div class="field full"><label for="need">Votre besoin</label><select id="need" name="need"><option>Préparation physique professionnelle</option><option>Réveil musculaire</option><option>Prévention des TMS</option><option>Formation de relais internes</option><option>Accompagnement global</option><option>Autre</option></select></div><div class="field full"><label for="message">Contexte</label><textarea id="message" name="message" maxlength="5000" placeholder="Votre activité, les postes concernés, vos objectifs…"></textarea></div>
+<div class="honey-field" aria-hidden="true"><label for="website">Ne pas remplir ce champ</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+<div class="field full"><label class="consent-label" for="consent" style="display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.55;font-weight:400"><input id="consent" name="consent" type="checkbox" required style="width:auto;margin:4px 0 0;flex-shrink:0"/>J’accepte que mes informations soient utilisées uniquement pour répondre à ma demande.</label></div></div>
+<button class="btn btn-dark" id="contactSubmit" type="submit">Envoyer ma demande</button>
+<p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+<p class="form-note">Vos informations sont transmises à contact@mvt-solutions.fr pour donner suite à votre demande. Aucun compte n’est nécessaire.</p></form></div></section>
 </main>
 <footer><div class="container">© 2026 MVT-Solutions — Sport et santé</div></footer>
 <script>
 const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
 menuBtn?.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);});
 document.querySelectorAll('#mobileNav a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
-document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const subject=encodeURIComponent('Projet préparation physique professionnelle - '+(f.get('company')||f.get('name')||''));const body=encodeURIComponent(`Bonjour Valentin,
-
-Je souhaite échanger au sujet d'un programme de préparation physique professionnelle.
-
-Nom : ${f.get('name')}
-Entreprise : ${f.get('company')}
-Email : ${f.get('email')}
-Téléphone : ${f.get('phone')}
-Besoin : ${f.get('need')}
-
-Contexte :
-${f.get('message')}`);window.location.href=`mailto:contact@mvt-solutions.fr?subject=${subject}&body=${body}`;});
+const contactForm=document.getElementById('contactForm');
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const status=document.getElementById('formStatus');
+  const button=document.getElementById('contactSubmit');
+  if (!contactForm.reportValidity()) return;
+  const payload=Object.fromEntries(new FormData(contactForm).entries());
+  payload.consent=document.getElementById('consent').checked;
+  button.disabled=true;
+  button.textContent='Envoi en cours…';
+  status.style.display='none';
+  status.textContent='';
+  status.removeAttribute('data-state');
+  try {
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),15000);
+    let response;
+    try {
+      response=await fetch('/api/contact', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload),
+        signal:controller.signal
+      });
+    } finally { clearTimeout(timeout); }
+    const result=await response.json().catch(()=>({}));
+    if (!response.ok || !result.ok) throw new Error(result.message || 'Envoi impossible pour le moment.');
+    status.dataset.state='success';
+    status.textContent='Merci ! Votre demande a été envoyée. Nous vous recontacterons prochainement.';
+    contactForm.reset();
+  } catch (error) {
+    status.dataset.state='error';
+    status.textContent='Votre demande n’a pas pu être envoyée automatiquement. Vous pouvez nous écrire directement à contact@mvt-solutions.fr.';
+  } finally {
+    status.style.display='block';
+    button.disabled=false;
+    button.textContent='Envoyer ma demande';
+  }
+});
 </script>
 </body></html>
