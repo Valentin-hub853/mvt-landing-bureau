@@ -1,0 +1,24 @@
+PACKAGE GITHUB — MISE À JOUR LANDING PAGE BUREAU + FORMULAIRE
+
+Contenu du ZIP
+- public/index.html
+- public/assets/hero-bureau-etirements.png
+- public/assets/valentin-portrait.jpg
+- functions/api/contact.js
+
+Ce package fait :
+1. met à jour la landing page Bureau ;
+2. intègre la photo Hero HD Bureau avec cercle géré par le HTML ;
+3. aligne la photo de Valentin sur la version ajustée ;
+4. connecte le formulaire Bureau à /api/contact ;
+5. maintient la compatibilité du formulaire Terrain.
+
+Variables Cloudflare à garder
+- RESEND_API_KEY (Secret)
+- RESEND_FROM_EMAIL = MVT-Solutions <formulaire@envoi.mvt-solutions.fr>
+- CONTACT_TO_EMAIL = contact@mvt-solutions.fr (optionnel mais recommandé)
+
+Import GitHub
+- glisser le contenu dans le dépôt existant en conservant les mêmes chemins ;
+- remplacer les fichiers existants si GitHub le propose ;
+- commit conseillé : "Mise à jour landing page Bureau + formulaire Resend".

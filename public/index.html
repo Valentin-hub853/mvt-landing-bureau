@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pauses actives au bureau et prévention des TMS | MVT-Solutions</title>
-<meta name="description" content="Pauses actives, prévention des TMS et lutte contre la sédentarité au travail. MVT-Solutions accompagne vos équipes en entreprise, à Lyon et en Auvergne-Rhône-Alpes.">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Au bureau, bougez plus | MVT-Solutions</title>
+<meta name="description" content="Des pauses actives et un accompagnement de proximité pour agir sur la sédentarité et les TMS au travail."/>
 <style>
 :root{--green:#0a9f16;--green-dark:#07850f;--green-soft:#f2f8f1;--green-soft-2:#eaf5e9;--orange:#ef6a2c;--ink:#2f3331;--muted:#5b615e;--line:#d9e1d8;--white:#fff;--max:1240px;}
 *{box-sizing:border-box}
@@ -21,8 +21,6 @@ img{display:block;max-width:100%}
 .btn-dark{background:#111;color:#fff;border-color:#111}
 .btn-light{background:#fff;color:#111}
 .btn:hover{transform:translateY(-1px)}
-
-/* Header */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid #eee;backdrop-filter:blur(10px)}
 .header-row{min-height:82px;display:flex;align-items:center;gap:28px}
 .brand{display:flex;align-items:center;text-decoration:none;flex:0 0 auto}
@@ -36,8 +34,6 @@ nav a:hover{color:var(--green-dark)}
 .mobile-nav{display:none;border-top:1px solid #eee;padding:12px 24px 18px;background:#fff}
 .mobile-nav.open{display:grid;gap:12px}
 .mobile-nav a{text-decoration:none;font-weight:500}
-
-/* Hero */
 .hero{background:linear-gradient(90deg,#fff 0%,#fff 50%,#f2f8f1 100%)}
 .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:62px;align-items:center;min-height:680px;padding:58px 0 72px}
 .hero h1{margin:0 0 20px;font-size:clamp(52px,5vw,72px);line-height:1.02;font-weight:700;letter-spacing:-.03em;max-width:720px;}
@@ -45,28 +41,18 @@ nav a:hover{color:var(--green-dark)}
 .hero-copy{margin:0 0 28px;font-size:19px;line-height:1.75;color:var(--muted);max-width:680px}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
 .hero-visual{display:flex;flex-direction:column;align-items:flex-end;justify-content:center}
-.hero-photo{width:min(100%,520px);aspect-ratio:1;border:4px solid var(--orange);border-radius:50%;padding:12px;background:#fff;box-shadow:0 20px 48px rgba(30,70,35,.10);overflow:hidden}
-.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;border:0;outline:0}
-.hero-badge{margin-top:24px;width:300px;background:#fff;border:1px solid #e3e3e3;padding:20px 22px;border-radius:12px;box-shadow:0 12px 28px rgba(0,0,0,.07)}
-.hero-badge strong{display:block;color:var(--green);font-size:24px;line-height:1.2;margin-bottom:6px}
-.hero-badge span{font-size:16px;line-height:1.55;color:#3e4541}
-
-/* Trust strip */
+.hero-photo{width:min(100%,520px);aspect-ratio:1;border:4px solid #111;border-radius:50%;padding:12px;background:#fff;box-shadow:0 20px 48px rgba(30,70,35,.10);overflow:hidden}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:50%;border:0;outline:0;background:#fff}
 .trust{background:#F2F8F1;color:#2f3831;border-top:1px solid #dfe9de;border-bottom:1px solid #dfe9de}
 .trust .container{display:flex;justify-content:center;align-items:center;padding:28px 0}
-.trust-photo{display:none !important}
 .trust-item{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0;border:none;min-height:auto;max-width:760px;margin:0 auto;text-align:center}
 .trust-item strong{display:block;font-size:28px;line-height:1.14;font-weight:700;letter-spacing:-.01em;color:#0b7d28}
 .trust-item p{margin:10px 0 0;font-size:18px;line-height:1.55;color:#425347}
-
-/* Enjeux */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .statement{background:var(--green-soft);padding:42px;border-left:4px solid var(--green)}
 .statement .quote{margin:0 0 26px;font-size:clamp(32px,2.7vw,44px);line-height:1.16;font-weight:500;letter-spacing:-.02em;max-width:21ch;color:#42504a}
 .statement h3{margin:0 0 12px;font-size:27px;line-height:1.25;font-weight:700}
 .statement p:last-child{margin:0;font-size:19px;line-height:1.75;color:#4e5752}
-
-/* Solutions */
 .solutions{background:#fbfdfb}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px}
 .card{position:relative;background:#fff;border:1px solid var(--line);padding:34px 30px 30px;min-height:100%;}
@@ -75,39 +61,31 @@ nav a:hover{color:var(--green-dark)}
 .card p{margin:0 0 18px;font-size:18px;line-height:1.7;color:#555d59}
 .card ul{margin:0;padding-left:20px}
 .card li{font-size:17px;line-height:1.65;margin:7px 0}
-
-/* Method */
 .method-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:end;margin-bottom:38px}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .step{border-top:3px solid var(--green);padding:24px 20px;background:#fff}
 .step-num{color:#9fcba3;font-size:44px;font-weight:700;line-height:1;margin-bottom:14px}
 .step h3{margin:0 0 10px;font-size:22px}
 .step p{margin:0;color:#5c625f;font-size:16px;line-height:1.65}
-
-/* Benefits */
 .benefits{background:#eaf5e9}
 .benefits-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px;align-items:start}
 .benefit-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .benefit{background:#fff;border:1px solid #dfe9de;padding:22px;min-height:120px}
 .benefit b{display:block;font-size:20px;margin-bottom:7px}
 .benefit span{font-size:16px;color:#58605b;line-height:1.55}
-
-/* Why */
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
 .why-card{border-top:3px solid var(--green);padding:30px;background:#fff}
 .metric{font-size:46px;font-weight:700;color:var(--green);line-height:1;margin-bottom:12px}
 .why-card h3{margin:0 0 10px;font-size:22px}
 .why-card p{margin:0;font-size:17px;color:#5b625e;line-height:1.7}
-
-/* Contact */
 .contact{background:#111;color:#fff}
 .contact .eyebrow{color:#73cf7a}
 .contact .section-title{color:#fff}
 .contact .section-lead{color:#cbd0cc}
 .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:start}
 .founder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;margin-top:30px;padding-top:24px;border-top:1px solid #333;text-align:center;width:100%}
-.founder-photo{width:156px;height:156px;aspect-ratio:1/1;overflow:hidden;border-radius:50%;background:#fff;border:4px solid rgba(255,255,255,.18);box-shadow:0 14px 32px rgba(0,0,0,.20);display:flex;align-items:center;justify-content:center;flex:0 0 156px;margin:0 auto}
-.founder-photo img{display:block;width:100%;height:100%;min-width:100%;min-height:100%;object-fit:cover;object-position:50% 18%;border-radius:50%;border:0;outline:0;background:#fff}
+.founder-photo{width:156px;height:156px;aspect-ratio:1/1;overflow:hidden;border-radius:50%;background:#fff;border:0;box-shadow:0 14px 32px rgba(0,0,0,.20);display:flex;align-items:center;justify-content:center;flex:0 0 156px;margin:0 auto}
+.founder-photo img{display:block;width:100%;height:100%;min-width:100%;min-height:100%;object-fit:cover;object-position:center;border-radius:50%;border:0;outline:0;background:#fff}
 .founder h3{margin:0 0 4px;font-size:24px}
 .founder p{margin:0;color:#d0d5d1;line-height:1.55}
 .contact-links{display:grid;gap:8px;margin-top:24px;align-items:center;text-align:center}
@@ -124,59 +102,28 @@ textarea{min-height:116px;resize:vertical}
 .form .btn{margin-top:16px;width:100%}
 .form-note{font-size:13px;color:#777!important;margin-top:10px!important}
 footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;font-size:14px}
-
-@media(max-width:1020px){
-  .hero-grid,.split,.benefits-grid,.contact-grid,.method-head{grid-template-columns:1fr}
-  .hero-grid{min-height:0;gap:44px}
-  .hero-visual{align-items:center}
-  .hero-badge{margin-left:auto;margin-right:auto}
-  .cards{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .trust .container{padding:22px 0}
-  .trust-item strong{font-size:24px}
-}
-@media(max-width:760px){
-  .container{width:min(var(--max),calc(100% - 30px))}
-  .section{padding:64px 0}
-  .eyebrow{font-size:20px}
-  .section-title{font-size:clamp(34px,9vw,44px)}
-  .section-lead{font-size:17px}
-  nav{display:none}
-  .menu-btn{display:block}
-  .hero-grid{padding:42px 0 58px}
-  .hero h1{font-size:clamp(44px,12.5vw,58px)}
-  .hero-sub{font-size:clamp(21px,6vw,26px)}
-  .hero-copy{font-size:17px}
-  .hero-photo{width:min(92vw,380px);border-width:4px;padding:9px}
-  .hero-badge{width:100%;max-width:320px}
-  .statement{padding:28px}
-  .statement .quote{font-size:clamp(28px,8vw,36px);max-width:none}
-  .statement h3{font-size:23px}
-  .statement p:last-child{font-size:17px}
-  .benefit-grid,.why-grid,.form-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr}
-  .field.full{grid-column:auto}
-  .founder-photo{width:136px;height:136px;flex-basis:136px}
-}
-@media(max-width:440px){
-  .hero-actions{display:grid}
-  .hero-actions .btn{width:100%}
-  .founder-photo{width:124px;height:124px;flex-basis:124px}
-}
+@media(max-width:1020px){.hero-grid,.split,.benefits-grid,.contact-grid,.method-head{grid-template-columns:1fr}.hero-grid{min-height:0;gap:44px}.hero-visual{align-items:center}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.trust .container{padding:22px 0}.trust-item strong{font-size:24px}}
+@media(max-width:760px){.container{width:min(var(--max),calc(100% - 30px))}.section{padding:64px 0}nav{display:none}.menu-btn{display:block}.hero-grid{padding:42px 0 58px}.hero h1{font-size:clamp(44px,12.5vw,58px)}.hero-sub{font-size:clamp(21px,6vw,26px)}.hero-copy{font-size:17px}.hero-photo{width:min(92vw,380px);border-width:4px;padding:9px}.statement{padding:28px}.statement .quote{font-size:clamp(28px,8vw,36px);max-width:none}.statement h3{font-size:23px}.statement p:last-child{font-size:17px}.benefit-grid,.why-grid,.form-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.field.full{grid-column:auto}.founder-photo{width:136px;height:136px;flex-basis:136px}}
+@media(max-width:440px){.hero-actions{display:grid}.hero-actions .btn{width:100%}.founder-photo{width:124px;height:124px;flex-basis:124px}}
+.form-status{margin:16px 0 0;padding:12px 14px;border-radius:4px;font-size:15px;line-height:1.5;display:none}
+.form-status[data-state="success"]{display:block;color:#145522;background:#e8f7eb;border:1px solid #b4dcbc}
+.form-status[data-state="error"]{display:block;color:#842828;background:#fff0ef;border:1px solid #f0c3bd}
+.form button[type="submit"][disabled]{opacity:.65;cursor:wait}
+.honey-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}
 </style>
-<meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://bougez.mvt-solutions.fr/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="MVT-Solutions Sport et Santé">
-<meta property="og:title" content="Au bureau, bougez plus — Pauses actives et prévention">
-<meta property="og:description" content="Des pauses actives et un accompagnement de proximité pour agir sur la sédentarité et les TMS au travail.">
-<meta property="og:url" content="https://bougez.mvt-solutions.fr/">
-<meta property="og:image" content="https://bougez.mvt-solutions.fr/assets/partage-mvt.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<link rel="canonical" href="https://bougez.mvt-solutions.fr/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:site_name" content="MVT-Solutions Sport et Santé"/>
+<meta property="og:title" content="Au bureau, bougez plus — Pauses actives et prévention"/>
+<meta property="og:description" content="Des pauses actives et un accompagnement de proximité pour agir sur la sédentarité et les TMS au travail."/>
+<meta property="og:url" content="https://bougez.mvt-solutions.fr/"/>
+<meta property="og:image" content="https://bougez.mvt-solutions.fr/assets/partage-mvt.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Pauses actives et prévention des TMS en entreprise","description":"Pauses actives, ateliers de prévention des TMS et accompagnement sport-santé des équipes au travail.","serviceType":["Pauses actives en entreprise","Prévention des TMS","Coaching sport-santé"],"areaServed":{"@type":"AdministrativeArea","name":"Auvergne-Rhône-Alpes"},"provider":{"@type":"Organization","name":"MVT-Solutions Sport et Santé","url":"https://www.mvt-solutions.fr/","logo":"https://bougez.mvt-solutions.fr/assets/logo-mvt.jpg","telephone":"+33603007174","email":"contact@mvt-solutions.fr"},"url":"https://bougez.mvt-solutions.fr/"}</script>
 </head>
 <body>
@@ -184,7 +131,7 @@ footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;fo
   <div class="container header-row">
     <a class="brand" href="#top" aria-label="MVT-Solutions - retour en haut de page"><img class="brand-logo" src="assets/logo-mvt.jpg" width="1882" height="564" alt="MVT-Solutions Sport et Santé"></a>
     <nav><a href="#enjeux">Pourquoi agir ?</a><a href="#solutions">Solutions</a><a href="#methode">Méthode</a><a class="btn btn-dark" href="#contact">Parler de mon projet</a></nav>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+    <button class="menu-btn" id="menuBtn" aria-controls="mobileNav" aria-expanded="false">Menu</button>
   </div>
   <div class="mobile-nav" id="mobileNav"><a href="#enjeux">Pourquoi agir ?</a><a href="#solutions">Solutions</a><a href="#methode">Méthode</a><a href="#contact">Parler de mon projet</a></div>
 </header>
@@ -192,74 +139,93 @@ footer{background:#111;color:#aaa;border-top:1px solid #282828;padding:22px 0;fo
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <p class="eyebrow">Pauses actives & prévention en entreprise</p>
-      <h1>Au bureau,<br>bougez plus.</h1>
-      <p class="hero-sub">Moins de temps assis. Moins de tensions. Plus d’énergie.</p>
-      <p class="hero-copy">MVT-Solutions aide les entreprises à remettre du mouvement dans la journée de travail grâce à des pauses actives, des ateliers de prévention et un accompagnement adapté aux besoins réels des équipes.</p>
+      <p class="eyebrow">Pauses actives en entreprise</p>
+      <h1>Au bureau,<br/>bougez plus.</h1>
+      <p class="hero-sub">Remettre du mouvement dans la journée de travail pour agir sur la sédentarité, les tensions et les TMS.</p>
+      <p class="hero-copy">MVT-Solutions accompagne les entreprises avec des pauses actives, de la prévention ciblée et des actions simples à mettre en place pour aider les équipes à bouger plus au quotidien.</p>
       <div class="hero-actions"><a class="btn btn-dark" href="#contact">Échanger sur mon projet</a><a class="btn btn-light" href="#methode">Découvrir la méthode</a></div>
     </div>
     <div class="hero-visual">
-      <div class="hero-photo"><img src="assets/pause-active-bureau.jpg" width="600" height="600" decoding="async" fetchpriority="high" alt="Trois collaborateurs réalisent une pause active au bureau"></div>
+      <div class="hero-photo"><img src="assets/hero-bureau-etirements.png" width="1269" height="1240" fetchpriority="high" decoding="async" alt="Deux hommes et une femme au bureau réalisent un étirement debout avec les deux bras vers le haut pour se grandir"></div>
     </div>
   </div>
 </section>
-<div class="trust"><div class="container">
-  <article class="trust-item">
-    <strong>Approche de proximité</strong>
-    <p>Humaine, concrète et adaptable, au plus près des équipes et des réalités du terrain.</p>
-  </article>
-</div></div>
-
+<div class="trust"><div class="container"><article class="trust-item"><strong>Approche de proximité</strong><p>Humaine, concrète et adaptable, au plus près des équipes et de la réalité du travail de bureau.</p></article></div></div>
 <section class="section" id="enjeux">
   <div class="container split">
-    <div><p class="eyebrow">Le risque invisible du bureau</p><h2 class="section-title">Rester assis longtemps n’est pas neutre.</h2><p class="section-lead">Le travail sur écran et les périodes assises prolongées favorisent l’installation de la sédentarité. L’enjeu n’est pas de transformer la journée en séance de sport, mais de créer des occasions simples et régulières de remettre le corps en mouvement.</p></div>
-    <div class="statement"><p class="quote">« Quelques minutes de mouvement, répétées au bon moment, peuvent changer la journée de travail. »</p><h3>Le bon réflexe : interrompre, mobiliser, repartir.</h3><p>Une pause active peut aider à réduire les tensions, remettre le corps en mouvement, soutenir la concentration et installer progressivement de meilleures habitudes au travail.</p></div>
+    <div><p class="eyebrow">Pourquoi agir ?</p><h2 class="section-title">Remettre du mouvement là où la journée fige le corps.</h2><p class="section-lead">Le travail de bureau expose souvent à de longues périodes assises, à des postures répétées devant écran et à une baisse du mouvement spontané. En remettant quelques minutes d’activité au bon moment, il est possible d’agir sur les tensions, la concentration, la vigilance et le confort au quotidien.</p></div>
+    <div class="statement"><p class="quote">« Bouger un peu, régulièrement, change déjà beaucoup dans la journée de travail. »</p><h3>Le bon réflexe : se lever, mobiliser, respirer, reprendre.</h3><p>L’objectif n’est pas d’ajouter une contrainte de plus, mais de rendre le mouvement simple, utile et facile à intégrer dans la réalité du bureau.</p></div>
   </div>
 </section>
-
 <section class="section solutions" id="solutions">
-  <div class="container"><p class="eyebrow">Les solutions MVT-Solutions</p><h2 class="section-title">Du mouvement, oui. Mais surtout le bon format.</h2><p class="section-lead">Nous combinons sensibilisation, pratique et accompagnement pour proposer des actions simples à déployer et faciles à adopter par les collaborateurs.</p>
+  <div class="container"><p class="eyebrow">Les solutions MVT-Solutions</p><h2 class="section-title">Des réponses simples pour remettre les équipes en mouvement.</h2><p class="section-lead">Nous combinons sensibilisation, pratique et accompagnement pour proposer les bons formats selon vos équipes, vos contraintes et votre organisation.</p>
     <div class="cards">
-      <article class="card"><h3>Pauses actives & sédentarité</h3><p>Des séquences courtes, accessibles en tenue de travail, pour interrompre les temps assis et remettre régulièrement le corps en mouvement.</p><ul><li>Mobilité et relâchement</li><li>Routines simples à reproduire</li><li>Formats intégrables à la journée</li></ul></article>
-      <article class="card"><h3>Prévention des TMS</h3><p>Des ateliers pour comprendre les facteurs de risque, analyser les contraintes et apprendre des gestes concrets adaptés à l’environnement professionnel.</p><ul><li>Comprendre les TMS</li><li>Identifier les facteurs de risque</li><li>Passer de la théorie à la pratique</li></ul></article>
-      <article class="card"><h3>Coaching spécialisé</h3><p>Pour les besoins plus ciblés : programmes structurés, petits groupes et accompagnement progressif pour améliorer la condition physique et le capital santé.</p><ul><li>Petits groupes</li><li>Programme adapté aux besoins</li><li>Accompagnement dans vos locaux</li></ul></article>
+      <article class="card"><h3>Pauses actives</h3><p>Des séquences courtes et accessibles pour interrompre les postures prolongées et remettre du mouvement dans la journée.</p><ul><li>Mobilité douce</li><li>Activation articulaire</li><li>Formats faciles à intégrer</li></ul></article>
+      <article class="card"><h3>Prévention des TMS</h3><p>Des actions ciblées pour mieux comprendre les tensions liées au travail de bureau et mettre en place des réponses concrètes.</p><ul><li>Prévention de la sédentarité</li><li>Conscience posturale</li><li>Mouvements utiles au quotidien</li></ul></article>
+      <article class="card"><h3>Coaching spécialisé</h3><p>Un accompagnement plus global pour structurer une démarche sport-santé adaptée à vos équipes et à votre culture d’entreprise.</p><ul><li>Accompagnement sur-mesure</li><li>Formats collectifs ou ciblés</li><li>Vision durable et progressive</li></ul></article>
     </div>
   </div>
 </section>
-
 <section class="section" id="methode">
-  <div class="container"><div class="method-head"><div><p class="eyebrow">La méthode MVT-Solutions</p><h2 class="section-title">Comprendre avant d’agir.</h2></div><p class="section-lead">Pas de catalogue plaqué sur votre entreprise : nous partons de vos enjeux, des besoins de vos collaborateurs et de votre organisation pour construire un accompagnement réaliste.</p></div>
-    <div class="steps"><div class="step"><div class="step-num">1</div><h3>Échanger</h3><p>Une réunion de cadrage pour comprendre votre contexte, vos enjeux QVCT et vos objectifs.</p></div><div class="step"><div class="step-num">2</div><h3>Écouter</h3><p>Un sondage dédié peut être proposé pour mieux identifier les besoins et attentes des collaborateurs.</p></div><div class="step"><div class="step-num">3</div><h3>Analyser</h3><p>Restitution des données, recommandations et proposition d’actions adaptées à vos priorités.</p></div><div class="step"><div class="step-num">4</div><h3>Déployer</h3><p>Construction d’un calendrier de prestations cohérent avec votre organisation et votre budget.</p></div></div>
+  <div class="container"><div class="method-head"><div><p class="eyebrow">La méthode MVT-Solutions</p><h2 class="section-title">Observer les usages avant d’installer les bons réflexes.</h2></div><p class="section-lead">Nous partons de votre contexte, des habitudes de travail et des contraintes vécues pour proposer des actions utiles, faciles à faire vivre et adaptées à votre entreprise.</p></div>
+  <div class="steps"><div class="step"><div class="step-num">1</div><h3>Comprendre</h3><p>Identifier les situations de sédentarité, les habitudes de travail et les tensions les plus fréquentes.</p></div><div class="step"><div class="step-num">2</div><h3>Construire</h3><p>Choisir les bons formats : pauses actives, prévention ciblée ou accompagnement plus global.</p></div><div class="step"><div class="step-num">3</div><h3>Déployer</h3><p>Installer des temps simples et réguliers, faciles à intégrer dans le rythme de travail.</p></div><div class="step"><div class="step-num">4</div><h3>Faire vivre</h3><p>Accompagner les équipes pour ancrer une dynamique durable et cohérente avec la culture de l’entreprise.</p></div></div>
   </div>
 </section>
-
 <section class="section benefits">
-  <div class="container benefits-grid"><div><p class="eyebrow">Des effets concrets au quotidien</p><h2 class="section-title">Faire du mouvement une habitude de travail.</h2><p class="section-lead">L’objectif n’est pas une animation ponctuelle oubliée le lendemain. Nous cherchons à donner aux équipes des repères simples, réutilisables et faciles à ancrer dans leur quotidien.</p></div>
-    <div class="benefit-grid"><div class="benefit"><b>Moins de temps assis</b><span>Créer des ruptures régulières dans les périodes sédentaires.</span></div><div class="benefit"><b>Moins de tensions</b><span>Remettre de la mobilité et du relâchement dans la journée.</span></div><div class="benefit"><b>Plus d’énergie</b><span>Redonner un rythme plus actif aux temps de travail.</span></div><div class="benefit"><b>Des réflexes durables</b><span>Donner des routines simples que les équipes peuvent réutiliser.</span></div></div>
+  <div class="container benefits-grid"><div><p class="eyebrow">Des effets concrets au quotidien</p><h2 class="section-title">Faire du mouvement un repère simple au bureau.</h2><p class="section-lead">L’idée n’est pas de proposer une action ponctuelle, mais d’installer des repères utiles pour aider les collaborateurs à bouger plus tout au long de la journée.</p></div>
+  <div class="benefit-grid"><div class="benefit"><b>Rompre la sédentarité</b><span>Créer des coupures utiles dans les journées trop statiques.</span></div><div class="benefit"><b>Retrouver de la mobilité</b><span>Agir sur les tensions liées aux postures de travail répétées.</span></div><div class="benefit"><b>Favoriser l’attention</b><span>Relancer la disponibilité physique et mentale au bon moment.</span></div><div class="benefit"><b>Créer une dynamique collective</b><span>Partager un temps simple qui soutient la cohésion d’équipe.</span></div></div>
   </div>
 </section>
-
 <section class="section"><div class="container"><p class="eyebrow">Pourquoi MVT-Solutions ?</p><h2 class="section-title">Un partenaire santé et mouvement, pas juste une animation.</h2><div class="why-grid"><div class="why-card"><div class="metric">20 ans</div><h3>d’expérience sport santé</h3><p>Une expertise construite dans l’accompagnement du mouvement, de la condition physique et de la prévention.</p></div><div class="why-card"><div class="metric">Sur-mesure</div><h3>adapté à votre contexte</h3><p>Ateliers, pauses actives, coachings et calendrier de déploiement sont combinés selon vos besoins, vos publics et votre budget.</p></div></div></div></section>
-
-<section class="section contact" id="contact"><div class="container contact-grid"><div><p class="eyebrow">Parlons de votre entreprise</p><h2 class="section-title">Envie de remettre vos équipes en mouvement ?</h2><p class="section-lead">Expliquez-nous votre contexte. Nous vous aiderons à identifier le bon point de départ : pause active, atelier, prévention TMS ou accompagnement plus global.</p><div class="founder"><div class="founder-photo"><img src="assets/valentin-portrait.jpg" width="480" height="480" loading="lazy" decoding="async" alt="Portrait de Valentin Besse"></div><div><h3>Valentin Besse</h3><p>Gérant fondateur de MVT-Solutions</p><p style="margin-top:8px;color:#fff">Votre contact direct pour cadrer votre besoin.</p></div></div><div class="contact-links"><a href="tel:+33603007174">06 03 00 71 74</a><a href="mailto:contact@mvt-solutions.fr">contact@mvt-solutions.fr</a><a href="https://www.mvt-solutions.fr/">www.mvt-solutions.fr</a></div></div>
-  <form class="form" id="contactForm"><h3>Parlez-nous de votre projet</h3><p>Quelques informations suffisent pour préparer un premier échange utile.</p><div class="form-grid"><div class="field"><label for="name">Nom</label><input id="name" name="name" required></div><div class="field"><label for="company">Entreprise</label><input id="company" name="company"></div><div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div><div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone"></div><div class="field full"><label for="need">Votre besoin</label><select id="need" name="need"><option>Pauses actives</option><option>Prévention des TMS</option><option>Coaching spécialisé</option><option>Accompagnement global</option><option>Autre</option></select></div><div class="field full"><label for="message">Contexte</label><textarea id="message" name="message"></textarea></div></div><button class="btn btn-dark" type="submit">Préparer mon message</button><p class="form-note">Le bouton ouvre votre messagerie avec les informations saisies.</p></form></div></section>
+<section class="section contact" id="contact"><div class="container contact-grid"><div><p class="eyebrow">Parlons de votre entreprise</p><h2 class="section-title">Envie de remettre vos équipes en mouvement ?</h2><p class="section-lead">Expliquez-nous votre contexte. Nous vous aiderons à identifier le bon point de départ : pause active, atelier, prévention TMS ou accompagnement plus global.</p><div class="founder"><div class="founder-photo"><img src="assets/valentin-portrait.jpg" width="1254" height="1254" loading="lazy" decoding="async" alt="Portrait de Valentin Besse"></div><div><h3>Valentin Besse</h3><p>Gérant fondateur de MVT-Solutions</p><p style="margin-top:8px;color:#fff">Votre contact direct pour cadrer votre besoin.</p></div></div><div class="contact-links"><a href="tel:+33603007174">06 03 00 71 74</a><a href="mailto:contact@mvt-solutions.fr">contact@mvt-solutions.fr</a><a href="https://www.mvt-solutions.fr/">www.mvt-solutions.fr</a></div></div>
+  <form class="form" id="contactForm"><h3>Parlez-nous de votre projet</h3><p>Quelques informations suffisent pour préparer un premier échange utile.</p><div class="form-grid"><div class="field"><label for="name">Nom</label><input id="name" name="name" required></div><div class="field"><label for="company">Entreprise</label><input id="company" name="company"></div><div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div><div class="field"><label for="phone">Téléphone</label><input id="phone" name="phone"></div><div class="field full"><label for="need">Votre besoin</label><select id="need" name="need"><option>Pauses actives</option><option>Prévention des TMS</option><option>Coaching spécialisé</option><option>Accompagnement global</option><option>Autre</option></select></div><div class="field full"><label for="message">Contexte</label><textarea id="message" name="message" maxlength="5000" placeholder="Votre activité, vos équipes, vos enjeux…"></textarea></div>
+<div class="honey-field" aria-hidden="true"><label for="website">Ne pas remplir ce champ</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+<div class="field full"><label class="consent-label" for="consent" style="display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.55;font-weight:400"><input id="consent" name="consent" type="checkbox" required style="width:auto;margin:4px 0 0;flex-shrink:0"/>J’accepte que mes informations soient utilisées uniquement pour répondre à ma demande.</label></div></div><button class="btn btn-dark" id="contactSubmit" type="submit">Envoyer ma demande</button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p><p class="form-note">Vos informations sont transmises à contact@mvt-solutions.fr pour donner suite à votre demande. Aucun compte n’est nécessaire.</p></form></div></section>
 </main>
 <footer><div class="container">© 2026 MVT-Solutions — Sport et santé</div></footer>
 <script>
 const menuBtn=document.getElementById('menuBtn'), mobileNav=document.getElementById('mobileNav');
 menuBtn?.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open);});
 document.querySelectorAll('#mobileNav a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
-document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget);const subject=encodeURIComponent('Projet MVT-Solutions - '+(f.get('company')||f.get('name')||''));const body=encodeURIComponent(`Bonjour Valentin,
-
-Je souhaite échanger au sujet d'un projet MVT-Solutions.
-
-Nom : ${f.get('name')}
-Entreprise : ${f.get('company')}
-Email : ${f.get('email')}
-Téléphone : ${f.get('phone')}
-Besoin : ${f.get('need')}
-
-Contexte :
-${f.get('message')}`);window.location.href=`mailto:contact@mvt-solutions.fr?subject=${subject}&body=${body}`;});
+const contactForm=document.getElementById('contactForm');
+contactForm?.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const status=document.getElementById('formStatus');
+  const button=document.getElementById('contactSubmit');
+  if (!contactForm.reportValidity()) return;
+  const payload=Object.fromEntries(new FormData(contactForm).entries());
+  payload.consent=document.getElementById('consent').checked;
+  payload.source='bureau';
+  button.disabled=true;
+  button.textContent='Envoi en cours…';
+  status.style.display='none';
+  status.textContent='';
+  status.removeAttribute('data-state');
+  try {
+    const controller=new AbortController();
+    const timeout=setTimeout(()=>controller.abort(),15000);
+    let response;
+    try {
+      response=await fetch('/api/contact', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload),
+        signal:controller.signal
+      });
+    } finally { clearTimeout(timeout); }
+    const result=await response.json().catch(()=>({}));
+    if (!response.ok || !result.ok) throw new Error(result.message || 'Envoi impossible pour le moment.');
+    status.dataset.state='success';
+    status.textContent='Merci ! Votre demande a été envoyée. Nous vous recontacterons prochainement.';
+    contactForm.reset();
+  } catch (error) {
+    status.dataset.state='error';
+    status.textContent='Votre demande n’a pas pu être envoyée automatiquement. Vous pouvez nous écrire directement à contact@mvt-solutions.fr.';
+  } finally {
+    status.style.display='block';
+    button.disabled=false;
+    button.textContent='Envoyer ma demande';
+  }
+});
 </script>
 </body></html>
