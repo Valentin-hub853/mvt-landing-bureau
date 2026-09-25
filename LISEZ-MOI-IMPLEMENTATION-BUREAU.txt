@@ -22,3 +22,5 @@ Import GitHub
 - glisser le contenu dans le dépôt existant en conservant les mêmes chemins ;
 - remplacer les fichiers existants si GitHub le propose ;
 - commit conseillé : "Mise à jour landing page Bureau + formulaire Resend".
+
+CONTRÔLE IMPORTANT : la page Bureau conserve le texte et les sections déjà validés sur GitHub ; seules les ressources Hero/portrait et le formulaire évoluent. Ne pas ajouter public/terrain/ depuis ce ZIP.
