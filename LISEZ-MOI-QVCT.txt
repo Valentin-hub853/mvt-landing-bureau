@@ -1,0 +1,26 @@
+MVT-SOLUTIONS — LOT QVCT
+
+Objectif
+- ajouter la landing page : https://bougez.mvt-solutions.fr/qvct/
+- conserver les pages Bureau et Terrain existantes
+- brancher le QR de la bannière vers cette nouvelle page
+
+Fichiers à importer dans le dépôt GitHub existant
+- public/qvct/index.html
+- public/qvct/assets/logo-mvt.jpg
+- public/qvct/assets/valentin-portrait.jpg
+- public/qvct/assets/hero-qvct.png
+- public/sitemap.xml (mise à jour)
+- functions/api/contact.js (ajout du formulaire QVCT, Bureau/Terrain conservés)
+- impression/QR_QVCT_LANDING.png
+- impression/QR_QVCT_LANDING.svg
+- impression/BANNIERE_QVCT_QR_FINAL.png
+
+QR cible
+https://bougez.mvt-solutions.fr/qvct/
+
+Cloudflare
+Aucune nouvelle variable n'est nécessaire : la page utilise la même fonction /api/contact et les variables Resend déjà configurées.
+
+Commit conseillé
+Ajout landing page QVCT et QR campagne

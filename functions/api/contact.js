@@ -5,7 +5,9 @@ const MAX_BYTES = 16000;
 const VALID_NEEDS = new Set([
   'Préparation physique professionnelle','Réveil musculaire','Prévention des TMS',
   'Formation de relais internes','Accompagnement global','Autre',
-  'Pauses actives','Coaching spécialisé'
+  'Pauses actives','Coaching spécialisé',
+  'Pauses actives & mise en mouvement','Ateliers QVCT',
+  'Cohésion & dynamique collective','Sensibilisation & conférences'
 ]);
 
 const reply = (status, data) => new Response(JSON.stringify(data), {
@@ -48,7 +50,8 @@ export async function onRequestPost({ request, env }) {
 
     if (trim(data.website, 256)) return reply(200, { ok: true });
 
-    const source = trim(data.source, 20) === 'bureau' ? 'bureau' : 'terrain';
+    const requestedSource = trim(data.source, 20);
+    const source = ['bureau','terrain','qvct'].includes(requestedSource) ? requestedSource : 'terrain';
     const name = trim(data.name, 150);
     const company = trim(data.company, 150);
     const email = trim(data.email, 254);
@@ -72,12 +75,18 @@ export async function onRequestPost({ request, env }) {
       return reply(503, { ok: false, message: 'Configuration e-mail indisponible.' });
     }
 
-    const pageLabel = source === 'bureau'
-      ? 'landing page Bureau (Au bureau, bougez plus)'
-      : 'landing page Terrain (Préparation physique professionnelle)';
-    const subject = source === 'bureau'
-      ? 'Demande site MVT – Au bureau, bougez plus'
-      : 'Demande site MVT – Préparation physique professionnelle';
+    const pageLabels = {
+      bureau: 'landing page Bureau (Au bureau, bougez plus)',
+      terrain: 'landing page Terrain (Préparation physique professionnelle)',
+      qvct: 'landing page QVCT (Bouger ensemble. Travailler mieux.)'
+    };
+    const subjects = {
+      bureau: 'Demande site MVT – Au bureau, bougez plus',
+      terrain: 'Demande site MVT – Préparation physique professionnelle',
+      qvct: 'Demande site MVT – QVCT & performance collective'
+    };
+    const pageLabel = pageLabels[source];
+    const subject = subjects[source];
 
     const body = [
       'Nouvelle demande depuis la ' + pageLabel,
