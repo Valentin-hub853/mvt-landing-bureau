@@ -1,0 +1,19 @@
+CORRECTIF QVCT — MVT-Solutions
+
+Ce lot corrige uniquement :
+- l'implantation de la photo Hero QVCT dans le cercle ;
+- le QR code de la bannière QVCT.
+
+URL du QR :
+https://bougez.mvt-solutions.fr/qvct/
+
+Fichiers GitHub à importer :
+- public/qvct/index.html
+- public/qvct/assets/hero-qvct.png
+
+Le dossier impression contient :
+- BANNIERE_QVCT_QR_VALIDE.png
+- QR_QVCT_LANDING.png
+- QR_QVCT_LANDING.svg
+
+Aucune modification des landing pages Bureau ou Terrain.
